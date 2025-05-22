@@ -1,10 +1,10 @@
 from lib.alumno import Alumno
 
 class ListaAlumnos:
-    CABECERA_ALUMNOS = "nie|nombre|apellidos|tramo|bilingue"
+    CABECERA_ALUMNOS:str = "nie|nombre|apellidos|tramo|bilingue"
 
     def __init__(self)->None:
-        self._lista_alumnos = []
+        self._lista_alumnos:list = []
 
     @property
     def lista_alumnos(self) -> list:
@@ -22,18 +22,18 @@ class ListaAlumnos:
         else:
             raise ValueError(f"No se encontró un alumno con el NIE {nie}.")
 
-    def listar_alumnos(self):
+    def listar_alumnos(self) ->str|list:
         if not self._lista_alumnos:
             return "No hay alumnos registrados"
         return [alumno.mostrar_alumno() for alumno in self._lista_alumnos]
 
-    def buscar_alumno_por_nie(self, nie:str):
+    def buscar_alumno_por_nie(self, nie:str)-> Alumno|None:
         for alumno in self._lista_alumnos:
             if alumno.nie == nie.lower():
                 return alumno
         return None
 
-    def cargar_alumnos(self, nombre_fichero:str):
+    def cargar_alumnos(self, nombre_fichero:str) ->str|None:
         try:
             with open(nombre_fichero, "r", encoding="utf-8") as fichero:
                 fichero.readline()
@@ -49,7 +49,7 @@ class ListaAlumnos:
             print(f"Error al cargar datos: {str(e)}")
             return f"Error al cargar datos: {str(e)}"
 
-    def guardar_alumnos(self, ruta_archivo:str):
+    def guardar_alumnos(self, ruta_archivo:str) ->str:
         try:
             with open(ruta_archivo, "w", encoding="utf-8") as fichero:
                 fichero.write(ListaAlumnos.CABECERA_ALUMNOS + "\n")

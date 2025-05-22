@@ -1,12 +1,12 @@
 class Materia:
-    AUTONUMERICO = 1
+    AUTONUMERICO:int = 1
 
     def __init__(self, nombre:str, departamento:str, id_materia:int = None) -> None:
         if id_materia is None:
-            self._id = Materia.AUTONUMERICO
+            self._id:int = Materia.AUTONUMERICO
             Materia.AUTONUMERICO += 1
         else:
-            self._id = id_materia
+            self._id:int = id_materia
             if id_materia >= Materia.AUTONUMERICO:
                 Materia.AUTONUMERICO = id_materia + 1
 

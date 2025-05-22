@@ -4,24 +4,24 @@ class ListaLibros:
     CABECERA_LIBROS:str = "isbn|titulo|autor|numero_ejemplares|id_materia|id_curso"
 
     def __init__(self) -> None:
-        self._lista_libros = []
+        self._lista_libros:list = []
 
     @property
-    def lista_libros(self):
+    def lista_libros(self) ->list:
         return self._lista_libros
 
-    def listar_libros(self):
+    def listar_libros(self) ->str|list[str]:
         if not self.lista_libros:
             return "No hay libros registrados"
         return [libro.mostrar_libro() for libro in self.lista_libros]
 
-    def buscar_libro_por_isbn(self, isbn: str):
+    def buscar_libro_por_isbn(self, isbn: str) -> Libro|None:
         for libro in self._lista_libros:
             if libro.isbn == isbn:
                 return libro
         return None
 
-    def cargar_libros(self, nombre_fichero:str):
+    def cargar_libros(self, nombre_fichero:str) ->str|None:
         try:
             with open(nombre_fichero, "r", encoding="utf-8") as fichero:
                 fichero.readline()
@@ -33,7 +33,7 @@ class ListaLibros:
         except Exception as e:
             return f"Error al cargar datos: {str(e)}"
 
-    def guardar_libros(self, nombre_fichero:str):
+    def guardar_libros(self, nombre_fichero:str) ->str:
         try:
             with open(nombre_fichero, 'w', encoding='utf-8') as fichero:
                 fichero.write(ListaLibros.CABECERA_LIBROS + "\n")

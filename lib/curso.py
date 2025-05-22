@@ -7,9 +7,9 @@ class Curso:
         return f" Curso: {self.curso}, Nivel: {self.nivel}"
 
     @property
-    def curso(self):
+    def curso(self) ->str:
         return self._curso
 
     @property
-    def nivel(self):
+    def nivel(self) ->str:
         return self._nivel

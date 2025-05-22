@@ -1,21 +1,21 @@
 from lib.materia import Materia
 
 class ListaMaterias:
-    CABECERA_MATERIAS = "id|nombre|departamento"
+    CABECERA_MATERIAS:str = "id|nombre|departamento"
 
     def __init__(self) -> None:
-        self._lista_materias = []
+        self._lista_materias:list = []
 
     @property
     def lista_materias(self) -> list:
         return self._lista_materias
 
-    def listar_materias(self):
+    def listar_materias(self) ->str|list[str]:
         if not self._lista_materias:
             return "No hay materias registradas"
         return [materia.mostrar_materia() for materia in self._lista_materias]
 
-    def cargar_materias(self, nombre_fichero: str):
+    def cargar_materias(self, nombre_fichero: str) ->str|None:
         try:
             with open(nombre_fichero, "r", encoding="utf-8") as fichero:
                 fichero.readline()
@@ -27,7 +27,7 @@ class ListaMaterias:
         except Exception as e:
             return f"Error al cargar datos: {str(e)}"
 
-    def guardar_materias(self, nombre_fichero: str):
+    def guardar_materias(self, nombre_fichero: str) ->str:
         try:
             with open(nombre_fichero, "w", encoding="utf-8") as fichero:
                 fichero.write(self.CABECERA_MATERIAS + "\n")

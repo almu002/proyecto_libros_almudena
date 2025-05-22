@@ -1,6 +1,6 @@
 from datetime import datetime
 
-def pedir_fecha_valida(mensaje):
+def pedir_fecha_valida(mensaje) ->None|datetime:
     while True:
         fecha = input(mensaje).strip()
         if fecha == "":

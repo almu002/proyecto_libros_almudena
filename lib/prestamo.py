@@ -2,7 +2,7 @@ from datetime import datetime
 
 class Prestamo:
 
-    ESTADO = ["p", "d"]
+    ESTADO:list = ["p", "d"]
 
     def __init__(self, nie:str, curso:str, isbn:str, fecha_prestamo:datetime, fecha_devolucion:datetime, estado:str) -> None:
         self._nie = nie

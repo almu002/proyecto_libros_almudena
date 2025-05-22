@@ -3,9 +3,9 @@ from datetime import datetime
 from lib.constantes import RUTA_CONTRATOS, RESPUESTA_POSITIVA, ESTADO_PENDIENTE, ESTADO_DEVUELTO
 
 class ListaPrestamos:
-    CABECERA_PRESTAMOS = "nie|curso|isbn|fecha_entrega|fecha_devolución|estado"
+    CABECERA_PRESTAMOS:str = "nie|curso|isbn|fecha_entrega|fecha_devolución|estado"
 
-    def __init__(self):
+    def __init__(self) ->None:
         self.lista_prestamos:list[Prestamo] = []
 
     def cargar_prestamos(self, nombre_fichero: str) -> str | list:

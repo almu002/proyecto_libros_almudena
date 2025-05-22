@@ -20,37 +20,37 @@ class Alumno:
         self._nie = nie.lower()
 
     @property
-    def nombre(self):
+    def nombre(self) -> str:
         return self._nombre
 
     @nombre.setter
-    def nombre(self, nombre: str):
+    def nombre(self, nombre: str) -> None:
         self._nombre = nombre.lower()
 
     @property
-    def apellidos(self):
+    def apellidos(self) ->str:
         return self._apellidos
 
     @apellidos.setter
-    def apellidos(self, apellidos: str):
+    def apellidos(self, apellidos: str) ->None:
         self._apellidos = apellidos.lower()
 
     @property
-    def tramo(self):
+    def tramo(self) ->str:
         return self._tramo
 
     @tramo.setter
-    def tramo(self, tramo: str):
+    def tramo(self, tramo: str) -> None:
         if tramo not in VALORES_VALIDOS_TRAMO:
             raise ValueError(f"El valor '{tramo}' no es válido para el tramo. Debe ser uno de {VALORES_VALIDOS_TRAMO}")
         self._tramo = tramo.lower()
 
     @property
-    def bilingue(self):
+    def bilingue(self) ->bool:
         return self._bilingue
 
     @bilingue.setter
-    def bilingue(self, bilingue: bool):
+    def bilingue(self, bilingue: bool) -> None:
         if bilingue not in VALORES_VALIDOS_BILINGUE:
             raise ValueError(f"El valor {bilingue} no es válido para bilingüe. Debe ser uno de {VALORES_VALIDOS_BILINGUE}")
         self._bilingue = bilingue
