@@ -1,0 +1,9 @@
+isbn|titulo|autor|numero_ejemplares|id_materia|id_curso
+9788491223456|el quijote|miguel de cervantes|5|1|a
+9788491122346|la sombra del viento|carlos ruiz zafón|3|2|b
+9788491223333|historia universal|juan perez|4|3|c
+9788491224444|biología moderna|ana gomez|6|4|d
+9788491225555|física para todos|lucas torres|5|5|e
+9788491226666|química básica|carla lopez|4|6|f
+9788491227777|código limpio|robert c. martin|2|7|g
+9788491228888|the great gatsby|f. scott fitzgerald|3|8|h

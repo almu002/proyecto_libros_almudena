@@ -1,0 +1,11 @@
+nie|nombre|apellidos|tramo|bilingue
+11345678a|juan|pérez fernández|o|False
+12345678b|ana|lópez rodriguez|i|True
+23456789c|marcos|sánchez ruiz|ii|False
+34567890d|lucía|gonzález lópez|o|True
+45678901e|david|martín perez|i|False
+56789012f|marta|fernández díaz|ii|True
+67890123g|pedro|gómez alba|o|False
+78901234h|laura|torres gil|i|True
+89012345i|andrés|navarro vicente|ii|False
+12345678x|almudena|valle gallegos|i|False

@@ -1,0 +1,2 @@
+USUARIO_ADMIN:str = "admin"
+CONTRASENA_ADMIN:str = "1234"

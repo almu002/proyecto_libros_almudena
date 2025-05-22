@@ -1,0 +1,9 @@
+curso|nivel
+a|1eso
+b|2eso
+c|3eso
+d|4eso
+e|1bach
+f|2bach
+g|1fp
+h|2fp

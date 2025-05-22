@@ -1,0 +1,11 @@
+id|nombre|departamento
+1|matemáticas|ciencias
+2|lengua|letras
+3|historia|sociales
+4|biología|ciencias
+5|física|ciencias
+6|química|ciencias
+7|informática|tecnología
+8|inglés|idiomas
+9|francés|idiomas
+10|filosofía|humanidades
