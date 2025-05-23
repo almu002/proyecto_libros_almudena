@@ -56,7 +56,7 @@ class ListaPrestamos:
 
         nuevo_prestamo = Prestamo(nie, curso, isbn, fecha_entrega, fecha_devolucion, estado)
         self.lista_prestamos.append(nuevo_prestamo)
-        return True, "Préstamo realizado correctamente."
+        return True, "Préstamo realizado correctamente"
 
     def devolver_prestamo(self, nie, curso, isbn, fecha_devolucion) -> str:
         for prestamo in self.lista_prestamos:

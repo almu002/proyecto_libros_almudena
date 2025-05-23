@@ -56,7 +56,7 @@ class Menu:
         print("=" * 24)
         print("GESTIÓN DE PRÉSTAMOS")
         print("=" * 24)
-        print("1. Listar préstamos")
+        print("1. Ver préstamos")
         print("2. Realizar préstamo")
         print("3. Devolver préstamo")
         print("4. Volver")

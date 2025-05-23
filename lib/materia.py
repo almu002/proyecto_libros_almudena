@@ -1,7 +1,7 @@
 class Materia:
     AUTONUMERICO:int = 1
 
-    def __init__(self, nombre:str, departamento:str, id_materia:int = None) -> None:
+    def __init__(self, nombre:str, departamento:str, id_materia:int=None) -> None:
         if id_materia is None:
             self._id:int = Materia.AUTONUMERICO
             Materia.AUTONUMERICO += 1
